@@ -1,6 +1,13 @@
-# Design
+# ImgSvc
 
-### Uses Sharp image processor
+Send your image to a Lambda function to have it resized.  Uses Sharp Image Processor
+
+### Features
+
+- Accepts either a buffer or s3 object (bucket, key)
+- Will deliver either a buffer of the resized image, or will write the file to s3.
+
+## Request Body
 
 Takes a JSON payload via restful endpoint to resize image to specified h/w.
 
