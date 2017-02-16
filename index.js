@@ -3,7 +3,7 @@
 const Resizer = require('./lib/resizer.module');
 const fs = require('fs');
 
-let testImg = fs.readFile('./data/test.jpg');
+let testImg = fs.readFileSync('./data/test.jpg');
 
 let _testPayload = {
     img: testImg,
