@@ -8,7 +8,8 @@ let testImg = fs.readFileSync('./data/test.jpg');
 let _testPayload = {
     img: testImg,
     h: 300,
-    w: null
+    w: null,
+    filename: 'test'
 };
 
 console.log(_testPayload.img);
