@@ -6,7 +6,7 @@ const fs = require('fs');
 let testImg = fs.readFile('./data/test.jpg');
 
 let _testPayload = {
-    img: fs.readFile('./data/test.jpg'),
+    img: testImg,
     h: 300,
     w: null
 };
