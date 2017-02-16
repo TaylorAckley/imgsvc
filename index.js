@@ -3,18 +3,10 @@
 const Resizer = require('./lib/resizer.module');
 const fs = require('fs');
 
-let testImg;
-
-fs.readFile('./data/test.jpg', (err, data) => {
-    if (err) {
-        console.log(err);
-    }
-    console.log(data);
-    testImg = data;
-});
+let testImg = fs.readFile('./data/test.jpg');
 
 let _testPayload = {
-    img: testImg,
+    img: fs.readFile('./data/test.jpg'),
     h: 300,
     w: null
 };
