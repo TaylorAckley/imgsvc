@@ -16,8 +16,9 @@ let _testPayload = {
     img: testImg,
     h: 300,
     w: null
-
 };
+
+console.log(_testPayload.img);
 
 let _testContext = {};
 
@@ -30,6 +31,7 @@ exports.handler = function(event, context, cb) {
 }
 
 exports.handler(_testPayload, _testContext, (err, result) => {
+    console.log('Evaluating result');
     if (err) {
         console.log(err);
     }
