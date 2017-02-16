@@ -30,5 +30,8 @@ exports.handler = function(event, context, cb) {
 }
 
 exports.handler(_testPayload, _testContext, (err, result) => {
+    if (err) {
+        console.log(err);
+    }
     console.log(result);
 });
