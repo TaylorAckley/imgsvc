@@ -1,11 +1,34 @@
 "use strict";
 
 const Resizer = require('./lib/resizer.module');
+const fs = require('fs');
 
-exports.handler = function(event, context, cb) {
+let testImg;
 
-    const resizer = new Resizer(event);
+fs.readFile('./data/test.jpg', (err, data) => {
+    if (err) {
+        console.log(err);
+    }
+    testImg = data;
+});
 
-    resizer.resize();
+let _testPayload = {
+    img: testImg,
+    h: 300,
+    w: null
 
 };
+
+let _testContext = {};
+
+exports.handler = function(event, context, cb) {
+    const resizer = new Resizer(event);
+
+    resizer.process()
+        .then((res) => cb(null, res))
+        .catch((err) => cb(err));
+}
+
+exports.handler(_testPayload, _testContext, (err, result) => {
+    console.log(result);
+});
