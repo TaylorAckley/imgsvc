@@ -9,6 +9,7 @@ fs.readFile('./data/test.jpg', (err, data) => {
     if (err) {
         console.log(err);
     }
+    console.log(data);
     testImg = data;
 });
 
