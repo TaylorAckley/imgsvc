@@ -9,10 +9,15 @@ let _testPayload = {
     img: testImg,
     h: 300,
     w: null,
-    filename: 'test'
-};
+    filename: 'test_rsz',
+    delivery: {
+        s3: {
+            bucket: 'imgsvc-dev',
+            key: 'test_rsz'
+        }
+    }
 
-console.log(_testPayload.img);
+};
 
 let _testContext = {};
 
