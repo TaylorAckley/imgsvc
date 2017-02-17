@@ -13,7 +13,7 @@ let _testPayload = {
     delivery: {
         s3: {
             bucket: 'imgsvc-dev',
-            key: 'test_rsz'
+            key: 'out/test_rsz'
         }
     }
 
