@@ -6,7 +6,13 @@ const fs = require('fs');
 let testImg = fs.readFileSync('./data/test.jpg');
 
 let _testPayload = {
-    img: testImg,
+    src: {
+        img: testImg,
+        s3: {
+            bucket: 'imgsvc-dev',
+            key: 'test/test.jpg'
+        }
+    },
     h: 300,
     w: null,
     filename: 'test_rsz',
